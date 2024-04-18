@@ -1,0 +1,20 @@
+/* Hide the navigation menu on medium screens */
+@media (max-width: 992px) {
+    ul {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Show the hamburger menu button on medium screens */
+@media (min-width: 992px) {
+    ul{
+        display: flex;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+}

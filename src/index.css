@@ -7,7 +7,94 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-color: #495E57;
+  --secondary-color: #F4CE14;
+  --max-width: 800px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+a:hover,
+a:active,
+a:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border-radius: 16px;
+  border: 0px;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.container{
+  width: 100%;
+}
+.container.testimonials,
+.container.footer{
+  background-color: var(--primary-color);
+}
+footer{
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  padding: 100px 0;
+  margin: auto;
+  gap: 20px;
+  color: white;
+}
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  gap: 20px;
+
+}
+
+footer ul li{
+  display: flex;
+}
+.footer-nav{
+  justify-self: flex-start;
+}
+.footer-contact{
+  justify-self: center;
+}
+.footer-social{
+  justify-self: flex-end;
+}
+footer a {
+  color: var(--secondary-color);;
+}
+footer a:hover{
+  color: white;
+  border-bottom: 2px solid white;
 }

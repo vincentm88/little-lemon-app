@@ -1,0 +1,81 @@
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .card{
+    background-color: lightgrey;
+    border-radius: 16px;
+  }
+  .cards > div {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Three rows for each card */
+    background-color: #f2f2f2; /* Example background color for cards */
+  }
+  
+  .cards > div img {
+    width: 100%; /* Ensure the image fills its container */
+    aspect-ratio: 4/3; /* Maintain aspect ratio (e.g., 4:3) */
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .card-info{
+    padding: 0 20px;
+    
+  }
+  
+  .card-title-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-price{
+    color: #C36004;
+    font-weight: 600;
+  }
+  .card-text{
+    font-size: 16px;
+    color: darkslategrey;
+  }
+  .card-button{
+    background-color: transparent;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
+    text-align: left;
+    padding: 50px 20px 40px 20px;
+  }
+  .card-button:hover{
+    border: none;
+  }
+
+  .testimonials-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .testimonial-card{
+    background-color: lightgrey;
+    padding: 10px;
+  }
+  
+  .testimonial-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    align-items: center;
+  }
+  .testimonial-info h3{
+    font-size: smaller;
+  }
+  .testimonial-image{
+    width: 100%;
+  }
+  .testimonial-text{
+    font-size: 14px;
+    color: darkslategrey;
+  }

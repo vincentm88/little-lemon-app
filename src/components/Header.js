@@ -1,15 +1,20 @@
+import headerImage from "../images/restauranfood.jpg";
+import "./Header.css";
 function Header() {
     return (
-        <>
+        <div className="header">
             <header>
-                <h1>Little Lemon</h1>
-                <h2>Chicago</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Dignissimos doloremque, rem, atque, obcaecati voluptates cumque autem quia quidem magni quas officiis. 
-                </p>
-                <button>Reserve a Table</button>
+                <div>
+                    <h1 className="header-title" >Little Lemon</h1>
+                    <h2 className="header-subtitle">Chicago</h2>
+                    <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+                    <button>Reserve a Table</button>
+                </div>
+                <div>
+                    <img src={headerImage} alt="Little Lemon Logo" width={400} height={400} />
+                </div>
             </header>
-        </>
+        </div>
     );
 }
 

@@ -1,0 +1,46 @@
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.specials {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+}
+
+
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials-header{
+  text-align: center;
+  color: var(--secondary-color);
+}
+section.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.about-image img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-title{
+  color: var(--primary-color);
+}
+.about-subtitle{
+  color: var(--primary-color);
+}
