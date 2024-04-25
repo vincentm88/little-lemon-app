@@ -7,6 +7,7 @@
   .card{
     background-color: lightgrey;
     border-radius: 16px;
+    width: 100%;
   }
   .cards > div {
     display: grid;
@@ -79,3 +80,72 @@
     font-size: 14px;
     color: darkslategrey;
   }
+.testimonial-rating{
+  display: flex;
+  justify-content: space-evenly;
+}
+.testimonial-rating .primary-color{
+  color: var(--primary-color);
+}
+
+.testimonial-rating .secondary-color{
+  color: var(--secondary-color);
+}
+
+  
+/* Hide on medium screens */
+@media (max-width: 992px) {
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 15px;
+  }
+  .testimonials-cards{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 15px;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* Hide on medium screens */
+@media (max-width: 700px) {
+  .specials-header{
+    flex-direction: column;
+  }
+  .testimonials-cards{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+  .card-title,
+  .card-price,
+  .card-text{
+    margin: 10px 0;
+  }
+  .card-button{
+    padding: 20px 20px 20px 20px;
+  }
+  .testimonial-card{
+    margin: 0 15px;
+  }
+  .card{
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* Show on medium screens */
+@media (min-width: 992px) {
+  
+
+}

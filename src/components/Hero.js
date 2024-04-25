@@ -6,10 +6,13 @@ import testimonial2Image from "../images/testimonial2.jpg";
 import testimonial3Image from "../images/testimonial3.jpg";
 import testimonial4Image from "../images/testimonial4.jpg";
 import chefImage from "../images/restaurant chef B.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from "react-router-dom";
 import "./Main.css";
 import "./Cards.css";
+import Testimonials from "./Testimonials";
 
-function Main() {
+function Hero() {
     const testimonials = [
         {
             name: "Sophia Mccoy",
@@ -27,7 +30,7 @@ function Main() {
             name: "Hunter Gomez",
             image: testimonial3Image,
             text: "Outstanding Greek-Mediterranean cuisine! Don't miss the spanakopita—flaky pastry filled with savory spinach and feta. Five-star dining at its finest!",
-            rating: 5
+            rating: 4
         },
         {
             name: "Gabriella Pena",
@@ -66,13 +69,13 @@ function Main() {
                 <section className="specials">
                     <div className="specials-header">
                         <h2>This weeks specials!</h2>
-                        <button>Online Menu</button>
+                        <Link className="btnlink" to="/menu"><button className="specials-button">Online Menu</button></Link>
                     </div>
                     <div className="cards">
                         {
                             specials.map((special) => (
                                 <div className="card">
-                                    <img src={special.image} alt="salad" height={200} />
+                                    <img src={special.image} alt="salad" />
                                     <div className="card-info">
                                         <div className="card-title-row">
                                             <h3 className="card-title">{special.title}</h3>
@@ -80,7 +83,7 @@ function Main() {
                                         </div>
                                         <p className="card-text">{special.description}</p>
                                     </div>
-                                    <button className="card-button">Order a delivery</button>
+                                    <button className="card-button"><Link to="/order-online">Order a Delivery</Link></button>
                                 </div>
                             ))
                         }
@@ -90,21 +93,7 @@ function Main() {
             <div className="container testimonials">
                 <section className="testimonials">
                     <h2 className="testimonials-header">Testimonials</h2>
-                    <div className="testimonials-cards">
-                        {
-                            testimonials.map((testimonial) => (
-                                <div className="testimonial-card">
-
-                                    <div className="testimonial-rating">Rating <span>{testimonial.rating}</span></div>
-                                    <div className="testimonial-info">
-                                        <img className="testimonial-image" src={testimonial.image} alt="person giving the testimonial" />
-                                        <h3 className="testimonial-name">{testimonial.name}</h3>
-                                    </div>
-                                    <div className="testimonial-text">{testimonial.text}</div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    <Testimonials testimonials={testimonials} />
                 </section>
             </div>
             <div className="container">
@@ -129,4 +118,4 @@ function Main() {
         </main>
     );
 }
-export default Main;
+export default Hero;

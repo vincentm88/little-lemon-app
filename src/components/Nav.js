@@ -2,6 +2,7 @@ import React from 'react';
 import './Nav.css'; // Import CSS file
 import logo from '../images/Logo.svg';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 const navMainStyles = {
     width: '100%',
@@ -32,14 +33,14 @@ function Nav() {
     return (
         <div style={navMainStyles}>
             <nav style={navStyles}>
-                <img src={logo} alt="Little Lemon Logo"/>
+                <Link className='btnlink' to="/"><img src={logo} alt="Little Lemon Logo" /></Link>
                 <ul style={ulStyles}>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Reservations</a></li>
-                    <li><a href="#">Order Online</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/menu">Menu</Link></li>
+                    <li><Link to="/reservations">Reservations</Link></li>
+                    <li><Link to="/order-online">Order Online</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
                 <button className="hamburger-menu">☰</button>
             </nav>

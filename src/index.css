@@ -49,6 +49,13 @@ button:hover {
   border: 2px solid var(--secondary-color);
   color: var(--secondary-color);
   cursor: pointer;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.btnlink,
+.btnlink:hover{
+  border: none;
 }
 
 .container{
@@ -58,43 +65,30 @@ button:hover {
 .container.footer{
   background-color: var(--primary-color);
 }
-footer{
-  max-width: var(--max-width);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-  padding: 100px 0;
-  margin: auto;
-  gap: 20px;
-  color: white;
-}
-footer ul{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0;
-  gap: 20px;
 
+/* Hide on medium screens */
+@media (max-width: 992px) {
 }
 
-footer ul li{
-  display: flex;
+
+/* Hide on medium screens */
+@media (max-width: 768px) {
+
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+    button{
+      font-size: 14px;
+    }
+  
 }
-.footer-nav{
-  justify-self: flex-start;
-}
-.footer-contact{
-  justify-self: center;
-}
-.footer-social{
-  justify-self: flex-end;
-}
-footer a {
-  color: var(--secondary-color);;
-}
-footer a:hover{
-  color: white;
-  border-bottom: 2px solid white;
+
+/* Show on medium screens */
+@media (min-width: 992px) {
+
+
 }
