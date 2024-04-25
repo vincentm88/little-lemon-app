@@ -23,7 +23,7 @@ function fetchAPI(date) {
         
     // Generate an array of 5 random times between 8 AM and 9 PM
     const availableTimes = Array.from({ length: Math.floor(Math.random() * (10 - 1 + 1)) + 1 }, () => { return (generateRandomTime()) }, generateRandomTime);
-
+    availableTimes.sort();
     console.log(availableTimes);
     // Simulate API call with a delay (for demonstration purposes)
     return new Promise((resolve, reject) => {

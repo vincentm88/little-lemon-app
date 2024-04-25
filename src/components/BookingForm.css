@@ -1,0 +1,24 @@
+.BookingForm{
+    max-width: 400px;
+    margin: auto;
+}
+
+.BookingForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+.BookingForm label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.BookingForm input{
+    
+}
+
+.BookingForm button{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10px;
+}
